@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import tabletka.plus.Repository.IPersonRepository;
 import tabletka.plus.service.EventService;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 
 @Controller
 
@@ -15,6 +18,7 @@ import tabletka.plus.service.EventService;
     public class TabletkaPlus {
 
         private final EventService eventService;
+
         @Autowired
         private IPersonRepository iPersonRepository;
 
@@ -25,9 +29,20 @@ import tabletka.plus.service.EventService;
 
     @GetMapping
         public String getDashboardPage(Model model) {
-//            model.addAttribute("timeNotify", 1);
+        model.addAttribute("age", 25);
+        model.addAttribute("breakfastTime", LocalTime.of(8,0));
+        model.addAttribute("lunchTime", LocalTime.of(13,0));
+        model.addAttribute("dinnerTime", LocalTime.of(18,0));
             return "tabletka.html";
         }
 
+    @GetMapping("/notification")
+    public String notifyUser(Model model) {
+        model.addAttribute("age", 25);
+        model.addAttribute("breakfastTime", LocalTime.of(8,0));
+        model.addAttribute("lunchTime", LocalTime.of(13,0));
+        model.addAttribute("dinnerTime", LocalTime.of(18,0));
+        return "notification.html";
+    }
 
 }
