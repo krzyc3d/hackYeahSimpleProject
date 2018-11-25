@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import tabletka.plus.Repository.IPersonRepository;
+import tabletka.plus.service.EventService;
 
 
 @Controller
@@ -13,13 +14,18 @@ import tabletka.plus.Repository.IPersonRepository;
     @RequestMapping("/tabletka")
     public class TabletkaPlus {
 
-
+        private final EventService eventService;
         @Autowired
         private IPersonRepository iPersonRepository;
 
-        @GetMapping
+    public TabletkaPlus(EventService eventService) {
+        this.eventService = eventService;
+    }
+
+
+    @GetMapping
         public String getDashboardPage(Model model) {
-            model.addAttribute("machine4x2netProduction", 1);
+            model.addAttribute("timeNotify", 1);
             return "tabletka.html";
         }
 

@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.time.LocalTime;
 
 @Entity
 @Data
@@ -19,17 +20,56 @@ public class Person{
     private int weight;
     private int hight;
     private char sex;
+    private LocalTime breakfast;
+    private LocalTime lunch;
+    private LocalTime dinner;
 
     public Person() {
     }
 
-    public Person(int age, int weight, int hight, char sex) {
+
+
+    public Person(int age, int weight, int hight, char sex, LocalTime breakfast, LocalTime lunch, LocalTime dinner) {
+
         this.age = age;
         this.weight = weight;
         this.hight = hight;
         this.sex = sex;
+        this.breakfast = breakfast;
+        this.lunch = lunch;
+        this.dinner = dinner;
+    }
+    public long getId() {
+        return id;
     }
 
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public LocalTime getBreakfast() {
+        return breakfast;
+    }
+
+    public void setBreakfast(LocalTime breakfast) {
+        this.breakfast = breakfast;
+    }
+
+    public LocalTime getLunch() {
+        return lunch;
+    }
+
+    public void setLunch(LocalTime lunch) {
+        this.lunch = lunch;
+    }
+
+    public LocalTime getDinner() {
+        return dinner;
+    }
+
+    public void setDinner(LocalTime dinner) {
+        this.dinner = dinner;
+    }
     public int getAge() {
         return age;
     }
