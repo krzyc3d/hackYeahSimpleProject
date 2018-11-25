@@ -7,5 +7,5 @@ import java.time.LocalTime;
 
 public interface IEventService {
 
-    boolean isNotification(LocalTime time, Person person, IPersonRepository iPersonRepository);
+    boolean isNotification(LocalTime time, Person person);
 }

@@ -11,12 +11,17 @@ public class EventService implements IEventService {
 
 
     @Override
-    public boolean isNotification(LocalTime time, Person person, IPersonRepository iPersonRepository) {
+    public boolean isNotification(LocalTime time, Person person) {
 
-
-        if (time==person.getBreakfast() || time== person.getDinner() || time==person.getLunch()){
-            return true;
+        if (person.getAge() > 18) {
+            if (time == person.getBreakfast() || time == person.getDinner() || time == person.getLunch()) {
+                return true;
+            } else if (time == person.getBreakfast() || time == person.getDinner()) {
+                return true;
+            }
         }
         return false;
     }
+
+
 }
