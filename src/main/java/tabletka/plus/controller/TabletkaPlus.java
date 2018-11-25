@@ -25,7 +25,7 @@ import tabletka.plus.service.EventService;
 
     @GetMapping
         public String getDashboardPage(Model model) {
-            model.addAttribute("timeNotify", 1);
+//            model.addAttribute("timeNotify", 1);
             return "tabletka.html";
         }
 

@@ -3,12 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <title>Tabsy</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link href="https://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet"/>
 
 </head>
-<body>
+<body style="background-image:url(http://www.medexpress.pl/uploads/2016/03/thinkstockphotos-489985282-1280x578@2x.jpg);
+background-attachment: scroll; background-repeat: no-repeat;   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  ">
 
 <h2>Weź tabsa </h2>
+
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/tabletka">Tabletka+</a>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">Dodaj leki</a>
+            </li>
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0" action="/dodajLeki">
+            <input class="form-control mr-sm-2" type="hidden" placeholder="Search"/>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+        </form>
+    </div>
+</nav>
+
+<div class="container" style="padding-top: 100px">
+
+    <div class="starter-template" >
+
+
+
+
+
+        <form class="form-inline my-2 my-lg-0" style="padding-top: 10px">
+            <input class="form-control mr-sm-1" type="text" placeholder="Name"/><br>
+            <input class="form-control mr-sm-1" type="text" placeholder="Weigth"/><br>
+            <input class="form-control mr-sm-1" type="text" placeholder="Heigth"/><br>
+            <input class="form-control mr-sm-1" type="text" placeholder="Age"/><br>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <h1 style="color: red">Weź leki!</h1>
+    </div>
+
+</div><!-- /.container -->
+
 
 </body>
 </html>

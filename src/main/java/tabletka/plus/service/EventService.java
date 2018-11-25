@@ -1,10 +1,12 @@
 package tabletka.plus.service;
 
+import org.springframework.stereotype.Service;
 import tabletka.plus.Entities.Person;
 import tabletka.plus.Repository.IPersonRepository;
 
 import java.time.LocalTime;
 
+@Service
 public class EventService implements IEventService {
 
 
