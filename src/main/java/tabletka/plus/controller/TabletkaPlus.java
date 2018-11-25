@@ -21,22 +21,24 @@ public class TabletkaPlus {
     @Autowired
     private IPersonRepository iPersonRepository;
 
+
     public TabletkaPlus(EventService eventService) {
         this.eventService = eventService;
     }
 
 
-//    @GetMapping
+    //    @GetMapping
 //    public String getDashboardPage(Model model) {
 //           model.addAttribute("timeNotify", 1);
 //        return "tabletka.html";
 //    }
     @GetMapping
-    public String message(Person person){
-        if (eventService.isNotification(LocalTime.now(), person)){
+
+    public String message(Person person) {
+        if (eventService.isNotification(LocalTime.now(), person)) {
             return "notification";
         }
         return "tabletka.html";
-    }
 
+    }
 }
